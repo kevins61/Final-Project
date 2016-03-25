@@ -36,6 +36,12 @@ Partial Class Main
         Me.tsmHelpAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cboSelectAuction = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.txtDate = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -60,13 +66,13 @@ Partial Class Main
         'tsmSaveClose
         '
         Me.tsmSaveClose.Name = "tsmSaveClose"
-        Me.tsmSaveClose.Size = New System.Drawing.Size(181, 26)
+        Me.tsmSaveClose.Size = New System.Drawing.Size(171, 26)
         Me.tsmSaveClose.Text = "&Save && Close"
         '
         'tsmExit
         '
         Me.tsmExit.Name = "tsmExit"
-        Me.tsmExit.Size = New System.Drawing.Size(181, 26)
+        Me.tsmExit.Size = New System.Drawing.Size(171, 26)
         Me.tsmExit.Text = "E&xit"
         '
         'tsmEdit
@@ -117,7 +123,7 @@ Partial Class Main
         'tsmHelpAbout
         '
         Me.tsmHelpAbout.Name = "tsmHelpAbout"
-        Me.tsmHelpAbout.Size = New System.Drawing.Size(181, 26)
+        Me.tsmHelpAbout.Size = New System.Drawing.Size(125, 26)
         Me.tsmHelpAbout.Text = "&About"
         '
         'StatusStrip1
@@ -136,11 +142,73 @@ Partial Class Main
         Me.lblStatus.Size = New System.Drawing.Size(153, 20)
         Me.lblStatus.Text = "ToolStripStatusLabel1"
         '
+        'cboSelectAuction
+        '
+        Me.cboSelectAuction.FormattingEnabled = True
+        Me.cboSelectAuction.Items.AddRange(New Object() {"1000", "1001", "1002"})
+        Me.cboSelectAuction.Location = New System.Drawing.Point(137, 76)
+        Me.cboSelectAuction.Name = "cboSelectAuction"
+        Me.cboSelectAuction.Size = New System.Drawing.Size(121, 24)
+        Me.cboSelectAuction.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(29, 79)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(102, 17)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Select Auction:"
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnUpdate.Location = New System.Drawing.Point(99, 366)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(118, 35)
+        Me.btnUpdate.TabIndex = 2
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnExit.Location = New System.Drawing.Point(355, 366)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(102, 35)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "E&xit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'txtDate
+        '
+        Me.txtDate.Location = New System.Drawing.Point(417, 78)
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.Size = New System.Drawing.Size(100, 22)
+        Me.txtDate.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(369, 82)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(42, 17)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Date:"
+        '
         'Main
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(637, 492)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtDate)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cboSelectAuction)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -170,4 +238,10 @@ Partial Class Main
     Friend WithEvents tsmHelpAbout As ToolStripMenuItem
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents lblStatus As ToolStripStatusLabel
+    Friend WithEvents cboSelectAuction As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnExit As Button
+    Friend WithEvents txtDate As TextBox
+    Friend WithEvents Label2 As Label
 End Class
